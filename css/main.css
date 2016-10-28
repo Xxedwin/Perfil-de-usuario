@@ -1,0 +1,101 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800';
+*{
+	margin:0;
+	padding: 0;	
+}
+body{
+	overflow: auto;
+	font-family: 'open sans', sans-serif;
+}
+
+.face-user{
+	background-color: #F1F1F1;	
+	margin:auto;
+}
+.conteiner2{	
+	margin: auto;
+}
+.face-user1{
+	background-color: #ffffff;	
+	width: 80%;
+	margin: auto;
+	margin-top: 10%;
+}
+.face-user2{
+	
+}
+.title3{	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 50%;
+}
+.title3 a{
+	text-decoration: none;
+	color: #000000;
+	font-size: 18px;
+}
+.foto{
+	text-align: center;
+}
+.foto img{
+		width: 150px; height: 150px;
+}
+.direction{
+	text-align: center;
+}
+.conteiner2{
+
+}
+.recommendation{
+	background-color: #ffffff;	
+	text-align: center;
+	width: 80%;
+	margin: auto;
+}
+.information-user{
+	 border: 1px solid black;
+	 width: 180px;
+	 text-align: center;
+	 margin: auto;
+}
+.information-user img{
+	width: 180px; height: 220px;	
+}
+/*star -rating*/
+.rating{
+	font-size: 20px;
+	direction: rtl;
+    unicode-bidi: bidi-override;
+    
+}
+.star-rating {  
+  margin: 0 auto;
+  height: 50px;
+  
+}
+.star-rating p {
+  text-align: center;
+}
+.star-rating label {
+  font-size: 20px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.radio {
+  color: grey;
+}
+
+.radio:hover,.radio:hover ~ label {
+  color: orange;
+}
+
+input[type="radio"]:checked ~ label {
+  color: orange;
+}
+
+
+  
