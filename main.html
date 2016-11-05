@@ -4,43 +4,127 @@
 	<title>perfil de user</title>
     <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
     <link rel="stylesheet"  type="text/css" href="css/main.css" />  	
+    	
+	<script type="text/javascript" src="js/jquery.js"></script>
 </head>
 <body>
+<script >
+  $(function(){
+  $('ul.tabs li:first').addClass('active');
+  $('.block article').hide();
+  $('.block article:first').show();
+  $('ul.tabs li').on('click',function(){
+  $('ul.tabs li').removeClass('active');
+  $(this).addClass('active')
+  $('.block article').hide();
+  var activeTab = $(this).find('a').attr('href');
+  $(activeTab).show();
+  });
+ })
+</script>
 	<div class="face-user">
-		<div class="conteiner2">
-			<div>
-				<div class="face-user1">
-					<div class="face-user2">
-						<div class="title3">
-							<a href="">Perfil</a>
-							<a href="">Favoritos</a>
-							<a href="">Configuracion</a>
-						</div>
-						<div class="foto">
-							<img src="icon/foto.png">
-							<h2>Angel Rodriguez</h2>
-						</div>
-						<span class="direction">
-							<span>
-								<h4>Ubicación</h4>
-								<p>Tacna-Peru</p>
-							</span>
-							<span>
-								<h4>Celular</h4>
-								<p>993 990 678</p>
-							</span>
-						</span>
-					</div>
-				</div>
+		<div class="conteiner2">							
+				<section class="wrapper">
+						    <ul class="tabs">
+						      <li><a href="#tab1">Perfil</a></li>
+						      <li><a href="#tab2">Favoritos</a></li>
+						      <li><a href="#tab3">Configuracion</a></li>
+						    </ul>
+							<div class="clr"></div>
+							    <section class="block">
+							      <article class="tab_1" id="tab1">
+							        <div class="foto">
+										<img src="icon/foto.png">
+										<h2>Angel Rodriguez</h2>
+									</div>
+									<span class="direction">
+										<span>
+											<h4>Ubicación</h4>
+											<p>Tacna-Peru</p>
+										</span>
+										<span>
+											<h4>Celular</h4>
+											<p>993 990 678</p>
+										</span>
+									</span>
+							      </article>
+							      <article class="tab_2" id="tab2">
+							        <div class="information-user1">
+										<img src="icon/comida.png">
+										<div class="comida1">
+											<h3 class="titulo-comida1">Gusteau </h3>
+											<h5>Especialidad:</h5>
+											<p>Comida Tradicional</p>
+										</div>
+										<form class="star-rating1">
+										  <p class="rating">
+										    <input id="radio1" name="estrellas" value="5" type="radio"><!--
+										    --><label class="radio" for="radio1">★</label><!--
+										    --><input id="radio2" name="estrellas" value="4" type="radio"><!--
+										    --><label class="radio" for="radio2">★</label><!--
+										    --><input id="radio3" name="estrellas" value="3" type="radio"><!--
+										    --><label class="radio" for="radio3">★</label><!--
+										    --><input id="radio4" name="estrellas" value="2" type="radio"><!--
+										    --><label class="radio" for="radio4">★</label><!--
+										    --><input id="radio5" name="estrellas" value="1" type="radio"><!--
+										    --><label class="radio" for="radio5">★</label>
+										  </p>
+										</form>
+									</div>
+									<div class="information-user1">
+										<img src="icon/comida1.png">
+										<div class="comida1">
+											<h3 class="titulo-comida1">Gusteau </h3>
+											<h5>Especialidad:</h5>
+											<p>Comida Tradicional</p>
+										</div>
+										<form class="star-rating1">
+										  <p class="rating">
+										    <input id="radio1" name="estrellas" value="5" type="radio"><!--
+										    --><label class="radio" for="radio1">★</label><!--
+										    --><input id="radio2" name="estrellas" value="4" type="radio"><!--
+										    --><label class="radio" for="radio2">★</label><!--
+										    --><input id="radio3" name="estrellas" value="3" type="radio"><!--
+										    --><label class="radio" for="radio3">★</label><!--
+										    --><input id="radio4" name="estrellas" value="2" type="radio"><!--
+										    --><label class="radio" for="radio4">★</label><!--
+										    --><input id="radio5" name="estrellas" value="1" type="radio"><!--
+										    --><label class="radio" for="radio5">★</label>
+										  </p>
+										</form>
+									</div>
+							      </article>
+							      <article class="tab_3" id="tab3">
+							        <form class="deposit">  	        
+							        	<div>
+							        		<p>Datos Personales</p>
+							        		<label>Nombre<input type="text" placeholder="Escribe tu nombre">	</label>       		        		
+							        		<label>Apellido<input type="text" placeholder="Escribe tu apellido"></label>				        		
+							        		<label>Celular<input type="text" placeholder="Escribe tu numero celular"></label>				        		
+							        		<label>Nacionalidad<input type="text" placeholder="Escribe tu nacionalidad"></label>		        		
+							        		<label>Correo<input type="text" placeholder="Escribe tu correo"></label>
+							        		<p>Cambiar contraseña</p>    		
+							        		<label>Contraseña actual<input type="password" placeholder="Escribe tu contraseña actual"></label>	        		
+							        		<label>Contraseña nueva<input type="password" placeholder="Escribe tu contraseña nueva"></label>		        		
+							        		<label>Repita la contraseña<input type="password" placeholder="Repita la contraseña"></label>
+							        		<label><input class="save" type="submit" value="Guardar"></label>
+							        	</div>					        
+							        </form>
+							      </article>
+								 </section>
+  				</section>				
 				<div class="recommendation">
 					<div>
 						<h2>Recomendaciones</h2>
+						<div class="triangulo"></div>
 					</div>
 					<div class="information-user">
 						<img src="icon/comida.png">
-						<h3>Gusteau</h3>
-						<h5>Especialidad:</h5>
-						<p>Comida Tradicional</p>
+						<div class="comida">
+							<h3 class="titulo-comida">Gusteau </h3>
+							<h5>Especialidad:</h5>
+							<p>Comida Tradicional</p>
+						</div>
 						<form class="star-rating">
 						  <p class="rating">
 						    <input id="radio1" name="estrellas" value="5" type="radio"><!--
@@ -58,9 +142,11 @@
 					</div>
 					<div class="information-user">
 						<img src="icon/comida.png">
-						<h3>Gusteau</h3>
-						<h5>Especialidad:</h5>
-						<p>Comida Tradicional</p>
+						<div class="comida">
+							<h3 class="titulo-comida">Gusteau </h3>
+							<h5>Especialidad:</h5>
+							<p>Comida Tradicional</p>
+						</div>
 						<form class="star-rating">
 						  <p class="rating">
 						    <input id="radio1" name="estrellas" value="5" type="radio"><!--
@@ -78,9 +164,11 @@
 					</div>
 					<div class="information-user">
 						<img src="icon/comida.png">
-						<h3>Gusteau</h3>
-						<h5>Especialidad:</h5>
-						<p>Comida Tradicional</p>
+						<div class="comida">
+							<h3 class="titulo-comida">Gusteau </h3>
+							<h5>Especialidad:</h5>
+							<p>Comida Tradicional</p>
+						</div>
 						<form class="star-rating">
 						  <p class="rating">
 						    <input id="radio1" name="estrellas" value="5" type="radio"><!--
@@ -98,9 +186,11 @@
 					</div>
 					<div class="information-user">
 						<img src="icon/comida.png">
-						<h3>Gusteau</h3>
-						<h5>Especialidad:</h5>
-						<p>Comida Tradicional</p>
+						<div class="comida">
+							<h3 class="titulo-comida">Gusteau </h3>
+							<h5>Especialidad:</h5>
+							<p>Comida Tradicional</p>
+						</div>
 						<form class="star-rating">
 						  <p class="rating">
 						    <input id="radio1" name="estrellas" value="5" type="radio"><!--
@@ -115,18 +205,9 @@
 						    --><label class="radio" for="radio5">★</label>
 						  </p>
 						</form>
-					</div>
-					<div>
-						
-					</div>
-					<div>
-						
-					</div>
-					<div>
-						
 					</div>
 				</div>
-			</div>			
+						
 		</div>
 	</div>
 </body>
